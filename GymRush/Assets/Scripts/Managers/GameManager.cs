@@ -45,6 +45,8 @@ public class GameManager : Singleton<GameManager>
             case GameState.GameOver: GameOver();
                 break;
         }
+
+        Application.targetFrameRate = Screen.currentResolution.refreshRate;
     }
 
     void GameStart()
@@ -53,6 +55,7 @@ public class GameManager : Singleton<GameManager>
         // TAP TO PLAY
         if (Input.GetMouseButtonDown(0)) gamestate = GameState.InGame;
         if (SceneManager.sceneCount < 2) SceneManager.LoadSceneAsync(asynSceneIndex, LoadSceneMode.Additive);
+        
     }
 
     void GameInGame()
