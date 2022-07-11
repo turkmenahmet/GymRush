@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 2199330507570636754}
   - component: {fileID: 7364821227029756781}
   - component: {fileID: 4453240052720570456}
+  - component: {fileID: 3904508443256034776}
   m_Layer: 0
   m_Name: Hamburger
   m_TagString: Hamburger
@@ -108,7 +109,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2199330507570478066}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.20414543, y: 20, z: -24.430986}
   m_LocalScale: {x: 0.27, y: 0.27, z: 0.27}
   m_ConstrainProportionsScale: 1
@@ -141,6 +142,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60ae51c0679cfc442a963a4b730bae91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3904508443256034776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2199330507570478066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d1020697c29cc40b74aa59f45c2cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2199330507570478070

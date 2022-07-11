@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4943735618257000595}
   - component: {fileID: 678423749875722588}
   - component: {fileID: 5294194433740068411}
+  - component: {fileID: 6631521785806459207}
   m_Layer: 0
   m_Name: Dumbbell
   m_TagString: Dumbbell
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6889189296814176582}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.9215114, y: 20.15, z: -31.77}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
@@ -109,5 +110,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea5c83e92541ce040b31e4da6cfb8e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6631521785806459207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6889189296814176582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 673e2f24bfdaf27489c42d2b4ced1b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

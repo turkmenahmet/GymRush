@@ -9,6 +9,7 @@ public class HamburgerTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             HamburgerController.instance.HamburgerFunction();
+            PlayerPowerScore.instance.HamburgerScore();
             Destroy(this.gameObject);
         }
     }

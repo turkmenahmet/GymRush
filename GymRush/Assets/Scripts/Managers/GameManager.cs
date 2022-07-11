@@ -40,7 +40,7 @@ public class GameManager : Singleton<GameManager>
                 break;
             case GameState.InGame: GameInGame();
                 break;
-            case GameState.Next: GameFinisht();
+            case GameState.Next: GameFinish();
                 break;
             case GameState.GameOver: GameOver();
                 break;
@@ -52,6 +52,7 @@ public class GameManager : Singleton<GameManager>
     void GameStart()
     {
         PanelController(Panels.Startp);
+        Time.timeScale = 0;
         // TAP TO PLAY
         if (Input.GetMouseButtonDown(0)) gamestate = GameState.InGame;
         if (SceneManager.sceneCount < 2) SceneManager.LoadSceneAsync(asynSceneIndex, LoadSceneMode.Additive);
@@ -61,9 +62,10 @@ public class GameManager : Singleton<GameManager>
     void GameInGame()
     {
         PanelController(Panels.Ingamep);
+        Time.timeScale = 1;
     }
 
-    void GameFinisht()
+    void GameFinish()
     {
         PanelController(Panels.Nextp);
     }

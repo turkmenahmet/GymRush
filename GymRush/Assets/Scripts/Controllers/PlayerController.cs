@@ -31,13 +31,27 @@ public class PlayerController : MonoBehaviour
         if (_isMoving)
         {
             // FORWARD
-            _hor = Input.GetAxis("Horizontal") * _moveSpeed * Time.deltaTime;
-            transform.Translate(_hor, 0, _swipeSpeed * Time.deltaTime);
+            _hor = Input.GetAxis("Horizontal") * _swipeSpeed * Time.deltaTime;
+            transform.Translate(_hor, 0, _moveSpeed * Time.deltaTime);
 
             // SWIPE LIMIT
             float xPos = Mathf.Clamp(transform.position.x, -1.4f, 1.4f);
             transform.position = new Vector3(xPos, transform.position.y, transform.position.z);
         }
+    }
+
+    public void FinishLine()
+    {
+        _swipeSpeed = 0;
+
+        Vector3 temp = new Vector3(0, transform.position.y, transform.position.z);
+        transform.position = Vector3.Lerp(temp, transform.position, _moveSpeed * Time.deltaTime);
+    }
+
+    public void FreezeFunction()
+    {
+        _swipeSpeed = 0;
+        _moveSpeed = 0;
     }
 
 }

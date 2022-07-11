@@ -25,13 +25,51 @@ public class DumbbellController : MonoBehaviour
         zScale = this.transform.localScale.z;
 
         // SCALING
-        xScale += 0.05f;
-        yScale += 0.05f;
-        zScale += 0.05f;
+        xScale += 0.035f;
+        yScale += 0.035f;
+        zScale += 0.035f;
 
         // INCREASE SCALE 0.15F
         this.transform.DOScaleX(xScale, 0.25f).SetEase(Ease.InOutSine);
         this.transform.DOScaleY(yScale, 0.25f).SetEase(Ease.InOutSine);
         this.transform.DOScaleZ(zScale, 0.25f).SetEase(Ease.InOutSine);
+    }
+
+    public void FlashScale()
+    {
+        // TEMP SCALE VALUES 
+        xScale = this.transform.localScale.x;
+        yScale = this.transform.localScale.y;
+        zScale = this.transform.localScale.z;
+
+        // SCALING
+        xScale += 0.5f;
+        yScale += 0.5f;
+        zScale += 0.5f;
+            
+        // INCREASE SCALE 0.15F
+        this.transform.DOScaleX(xScale, 1).SetEase(Ease.InOutSine);
+        this.transform.DOScaleY(yScale, 1).SetEase(Ease.InOutSine);
+        this.transform.DOScaleZ(zScale, 1).SetEase(Ease.InOutSine);
+
+        Invoke("FlashScaleOut", 1f);
+    }
+
+    private void FlashScaleOut()
+    {
+        // TEMP SCALE VALUES 
+        xScale = this.transform.localScale.x;
+        yScale = this.transform.localScale.y;
+        zScale = this.transform.localScale.z;
+
+        // SCALING
+        xScale -= 0.5f;
+        yScale -= 0.5f;
+        zScale -= 0.5f;
+
+        // INCREASE SCALE 0.15F
+        this.transform.DOScaleX(xScale, 0.5f).SetEase(Ease.InOutSine);
+        this.transform.DOScaleY(yScale, 0.5f).SetEase(Ease.InOutSine);
+        this.transform.DOScaleZ(zScale, 0.5f).SetEase(Ease.InOutSine);
     }
 }

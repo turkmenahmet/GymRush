@@ -9,6 +9,7 @@ public class DumbbellTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             DumbbellController.instance.DumbbellFunction();
+            PlayerPowerScore.instance.DumbbellScore();
             Destroy(this.gameObject);
         }
     }
