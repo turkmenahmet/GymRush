@@ -17,6 +17,8 @@ public class InGameUI : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI _limitText;
 
+    [SerializeField] Image _progressBar;
+
     private void Awake()
     {
         if (instance == null)
@@ -73,5 +75,11 @@ public class InGameUI : MonoBehaviour
     public void LimitText()
     {
        
+    }
+
+    public void ProgressBarOut()
+    {
+        _progressBar.GetComponent<RectTransform>().DOScale(0, 0.25f).SetEase(Ease.InOutSine);
+        _progressBar.GetComponent<CanvasGroup>().DOFade(0, 0.25f);
     }
 }

@@ -48,11 +48,11 @@ public class DumbbellController : MonoBehaviour
         zScale += 0.5f;
             
         // INCREASE SCALE 0.15F
-        this.transform.DOScaleX(xScale, 1).SetEase(Ease.InOutSine);
-        this.transform.DOScaleY(yScale, 1).SetEase(Ease.InOutSine);
-        this.transform.DOScaleZ(zScale, 1).SetEase(Ease.InOutSine);
+        this.transform.DOScaleX(xScale, 0.25f).SetEase(Ease.InOutSine);
+        this.transform.DOScaleY(yScale, 0.25f).SetEase(Ease.InOutSine);
+        this.transform.DOScaleZ(zScale, 0.25f).SetEase(Ease.InOutSine);
 
-        Invoke("FlashScaleOut", 1f);
+        Invoke("FlashScaleOut", 0.5f);
     }
 
     private void FlashScaleOut()
@@ -68,8 +68,8 @@ public class DumbbellController : MonoBehaviour
         zScale -= 0.5f;
 
         // INCREASE SCALE 0.15F
-        this.transform.DOScaleX(xScale, 0.5f).SetEase(Ease.InOutSine);
-        this.transform.DOScaleY(yScale, 0.5f).SetEase(Ease.InOutSine);
-        this.transform.DOScaleZ(zScale, 0.5f).SetEase(Ease.InOutSine);
+        this.transform.DOScaleX(xScale, 0.25f).SetEase(Ease.InOutSine);
+        this.transform.DOScaleY(yScale, 0.25f).SetEase(Ease.InOutSine);
+        this.transform.DOScaleZ(zScale, 0.25f).SetEase(Ease.InOutSine);
     }
 }

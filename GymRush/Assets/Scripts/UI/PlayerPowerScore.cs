@@ -29,7 +29,7 @@ public class PlayerPowerScore : MonoBehaviour
         _playerPower += 10;
         _playerPowerText.text = _playerPower.ToString();
 
-        if (_playerPower % 100 == 0)
+        if (_playerPower % 30 == 0)
         {
             DumbbellController.instance.FlashScale();
             InGameUI.instance.BicepsPopUp();
@@ -45,6 +45,8 @@ public class PlayerPowerScore : MonoBehaviour
 
         if (_playerPower < 0)
         {
+            _playerPower = 0;
+            _playerPowerText.text = _playerPower.ToString();
             InGameUI.instance.TextUnshow();
             PlayerController.instance.FreezeFunction();
             AnimatorManager.instance.DeadAnimation();
@@ -58,7 +60,6 @@ public class PlayerPowerScore : MonoBehaviour
             _playerPower += 20;
             _playerPowerText.text = _playerPower.ToString();
 
-            DumbbellController.instance.FlashScale();
             InGameUI.instance.PowerfulPopUp();
             InGameUI.instance.TextScalePopUp();
             AnimatorManager.instance.StrongAnimation();

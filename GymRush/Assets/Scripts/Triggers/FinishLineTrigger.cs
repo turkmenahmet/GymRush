@@ -8,7 +8,8 @@ public class FinishLineTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            InGameUI.instance.TextUnshow();
+            //InGameUI.instance.TextUnshow();
+            InGameUI.instance.ProgressBarOut();
             PlayerController.instance.FinishLine();
             AnimatorManager.instance.PunchAnimation();
         }
